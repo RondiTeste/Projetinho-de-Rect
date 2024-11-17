@@ -1,0 +1,221 @@
+/* Variáveis de estilo */
+:root {
+  --color1: #20130a;
+  --color2: #142026;
+  --color3: #123142;
+  --color4: #3b657a;
+  --color5: #e9f0c9;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --radius: 8px;
+  --line-height: 1.5;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color2);
+  color: var(--color5);
+  display: flex;
+  justify-content: center; /* Alinha os itens ao centro horizontalmente */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  min-height: 100vh;
+  padding: 20px;
+  line-height: var(--line-height);
+  flex-direction: column;
+  margin-top: 70px; /* Adiciona o espaço de 70px de distância do topo */
+  overflow-x: hidden; /* Evita rolagem lateral */
+}
+/* Adicione um reset para z-index e padding */
+html {
+  scroll-behavior: smooth; /* Rolagem suave */
+}
+/* Container principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--color1);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px var(--shadow);
+  overflow-x: hidden;
+  margin-top: 70px; /* Adiciona a distância de 70px para todos os elementos dentro da .container */
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 70px; /* Adiciona a distância de 70px para o formulário */
+}
+
+form label {
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color5);
+}
+
+input {
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid var(--color3);
+  border-radius: var(--radius);
+  background-color: var(--color4);
+  color: var(--color5);
+  transition: all 0.3s ease;
+  margin-top: 70px; /* Adiciona a distância de 70px para os inputs */
+}
+
+input:focus {
+  border-color: var(--color5);
+  box-shadow: 0 0 8px var(--color5);
+  outline: none;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  background-color: var(--color3);
+  color: var(--color5);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 70px; /* Adiciona a distância de 70px para o botão */
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+/* Divs */
+div {
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  background-color: var(--color4);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px var(--shadow);
+  font-size: 14px;
+  text-align: center;
+  color: var(--color5);
+  margin-top: 70px; /* Adiciona a distância de 70px para as divs */
+}
+
+.div-destaque {
+  background-color: var(--color3);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Estilo para Títulos */
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-weight: var(--font-weight-bold);
+  color: var(--color5);
+  text-align: center;
+  padding: 20px;
+  margin-top: 70px; /* Adiciona a distância de 70px para os títulos */
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--color3);
+}
+
+/* Estilos para Parágrafos e outras tags */
+p {
+  font-size: 1rem;
+  color: var(--color5);
+  line-height: var(--line-height);
+  padding: 20px;
+  margin-top: 70px; /* Adiciona a distância de 70px para parágrafos */
+}
+
+a {
+  color: var(--color5);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 20px;
+  margin-top: 70px; /* Adiciona a distância de 70px para links */
+}
+
+a:hover {
+  color: var(--color3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+  }
+}
